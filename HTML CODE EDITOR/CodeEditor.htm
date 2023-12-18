@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeCraft Pro: Advanced HTML Editor Suite</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+  <link rel="stylesheet" href="styles.css">
+   <script src="scripts.js"></script> 
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <div id="sidebar-content" class="sidebar-content">
+        <button onclick="saveFile()">Save File</button>
+        <button onclick="loadFile()">Load File</button>
+      </div>
+    </div>
+    <div id="editor-container">
+      <h1>CodeCraft Pro</h1>
+      <div id="editor-wrapper">
+        <textarea id="editor" class="form-control" placeholder="Write your HTML code here"></textarea>
+        <div id="buttons">
+          <button onclick="runCode()" class="btn btn-success">Run Code</button>
+          <button onclick="clearOutput()" class="btn btn-danger">Clear Output</button>
+          <button onclick="formatCode()" class="btn btn-info">Format Code</button>
+        </div>
+      </div>
+      <div class="row">
+        <iframe id="output" style="width: calc(99% - 22px); height: 300px; border: 1px solid #ddd; border-radius: 5px; margin-left: 15px;"></iframe>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 Created By Ark. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/htmlmixed/htmlmixed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/addon/edit/matchbrackets.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.11.0/beautify-html.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
